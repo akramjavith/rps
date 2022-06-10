@@ -47,18 +47,21 @@ const game = () => {
         player = player.toLowerCase();
         computer = computer.toLowerCase();
         if(player === computer){
-            result.textContent = 'Tie'
+            result.textContent = 'Tie';
+          result.style.color = 'orange';
         }
         else if(player == 'rock'){
             if(computer == 'paper'){
                 result.textContent = 'Computer Won';
                 computerScore++;
                 computerScoreBoard.textContent = computerScore;
+              result.style.color = 'red';
  
             }else{
                 result.textContent = 'Player Won'
                 playerScore++;
                 playerScoreBoard.textContent = playerScore;
+              result.style.color = 'green';
             }
         }
         else if(player == 'scissors'){
@@ -66,10 +69,12 @@ const game = () => {
                 result.textContent = 'Computer Won';
                 computerScore++;
                 computerScoreBoard.textContent = computerScore;
+              result.style.color = 'red';
             }else{
                 result.textContent = 'Player Won';
                 playerScore++;
                 playerScoreBoard.textContent = playerScore;
+              result.style.color = 'green';
             }
         }
         else if(player == 'paper'){
@@ -77,10 +82,12 @@ const game = () => {
                 result.textContent = 'Computer Won';
                 computerScore++;
                 computerScoreBoard.textContent = computerScore;
+              result.style.color = 'red';
             }else{
                 result.textContent = 'Player Won';
                 playerScore++;
                 playerScoreBoard.textContent = playerScore;
+              result.style.color = 'green';
             }
         }
     }
@@ -103,7 +110,7 @@ const game = () => {
         if(playerScore > computerScore){
             result.style.fontSize = '2rem';
             result.innerText = 'You Won The Game'
-            result.style.color = '#308D46';
+            result.style.color = 'green';
         }
         else if(playerScore < computerScore){
             result.style.fontSize = '2rem';
@@ -113,7 +120,7 @@ const game = () => {
         else{
             result.style.fontSize = '2rem';
             result.innerText = 'Tie';
-            result.style.color = 'grey'
+            result.style.color = 'orange'
         }
         reloadBtn.innerText = 'Restart';
         reloadBtn.style.display = 'flex'
